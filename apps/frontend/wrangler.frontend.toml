@@ -1,0 +1,47 @@
+name = "girl-generator-frontend"
+main = ".open-next/worker.js"
+compatibility_date = "2025-10-01"
+compatibility_flags = ["nodejs_compat"]
+
+[observability.logs]
+enabled = true
+
+[dev]
+ip = "127.0.0.1"
+port = 8789
+local_protocol = "http"
+
+[assets]
+binding = "ASSETS"
+directory = ".open-next/assets"
+
+[vars]
+# Public environment variables (non-sensitive)
+NEXT_PUBLIC_API_BASE = "https://api.girlgenerator.net"
+NEXT_PUBLIC_ASSET_BASE = "<set-in-ci>"
+NEXT_PUBLIC_R2_PUBLIC_BASE_URL = "<set-in-ci>"
+NEXT_PUBLIC_DOWNLOAD_BASE = "<set-in-ci>"
+NEXT_PUBLIC_SUPABASE_URL = "<set-in-ci>"
+API_BASE = "https://api.girlgenerator.net"
+SENTRY_ENVIRONMENT = "production"
+
+# All sensitive values must be set via Wrangler Secrets
+# Command: echo "value" | wrangler secret put SECRET_NAME
+# Required secrets (set via GitHub Actions or manually):
+# - SUPABASE_SERVICE_ROLE_KEY
+# - DATABASE_URL
+# - AUTH_JWT_SECRET
+# - AUTH_ALLOWED_ORIGINS
+# - AUTH_BASE_URL
+# - AUTH_COOKIE_DOMAIN
+# - GOOGLE_CLIENT_ID
+# - GOOGLE_CLIENT_SECRET
+# - REPLICATE_API_TOKEN
+# - REPLICATE_FLUX_SCHNELL_VERSION
+# - REPLICATE_WEBHOOK_SECRET
+
+# If OpenNext caching is required later, configure a KV binding
+# [[kv_namespaces]]
+# binding = "NEXT_CACHE_WORKERS_KV"
+# id = "<set-in-ci>"
+# preview_id = "<set-in-ci>"

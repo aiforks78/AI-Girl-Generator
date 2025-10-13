@@ -1,0 +1,23 @@
+{
+  "projectName": "Girl Generator",
+  "description": "AI-powered female character image generator",
+  "tagline": "Create beautiful AI-generated female characters",
+  "logos": {
+    "main": "/logo.png",
+    "favicon": "/logo.jpeg",
+    "navbar": "/logo-88.png",
+    "small": "/logo-44.png",
+    "large": "/logo-176.png"
+  },
+  "colors": {
+    "primary": "#3b82f6",
+    "secondary": "#1e293b",
+    "accent": "#60a5fa",
+    "background": "#0f172a"
+  },
+  "fonts": {
+    "primary": "Inter, sans-serif",
+    "heading": "Space Grotesk, Inter, sans-serif",
+    "mono": "JetBrains Mono, monospace"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {},
+  "include": [
+    "apps/**/*.ts",
+    "apps/**/*.tsx",
+    "apps/**/*.d.ts",
+    "shared/**/*.ts",
+    "scripts/**/*.ts",
+    "types/**/*.ts",
+    "workers/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

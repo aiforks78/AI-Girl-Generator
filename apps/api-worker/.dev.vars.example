@@ -1,0 +1,15 @@
+R2_ACCESS_KEY_ID=your_access_key
+R2_SECRET_ACCESS_KEY=your_secret_key
+R2_ACCOUNT_ID=your_account_id
+R2_BUCKET_NAME=girl-generator-public
+R2_PUBLIC_BASE_URL=https://you.girlgenerator.net/
+SUPABASE_URL=https://your-project.supabase.co
+SUPABASE_SERVICE_ROLE_KEY=your_service_role_key
+AUTH_JWT_SECRET=replace-with-long-secret
+GOOGLE_CLIENT_ID=placeholder
+GOOGLE_CLIENT_SECRET=placeholder
+REPLICATE_API_TOKEN=r8_your_token
+REPLICATE_FLUX_SCHNELL_VERSION=your_version_id
+REPLICATE_WEBHOOK_URL=https://api.girl-generator.com/webhook/replicate
+REPLICATE_WEBHOOK_SECRET=optional-secret
+ADMIN_USER_IDS=uuid-1,uuid-2

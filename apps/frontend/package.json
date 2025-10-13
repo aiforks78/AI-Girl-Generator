@@ -1,0 +1,58 @@
+{
+  "name": "girl-generator-frontend",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.17.1",
+  "scripts": {
+    "dev": "node init && next dev",
+    "build": "node init && next build",
+    "start": "node init && next start",
+    "lint": "next lint",
+    "postbuild": "next-sitemap",
+    "build:on": "node init && opennextjs-cloudflare build --openNextConfigPath ./open-next.config.ts --config ./wrangler.frontend.toml",
+    "preview:on": "opennextjs-cloudflare preview --config ./wrangler.frontend.toml",
+    "deploy:on": "opennextjs-cloudflare deploy --config ./wrangler.frontend.toml"
+  },
+  "dependencies": {
+    "@heroicons/react": "^2.1.5",
+    "@heroui/react": "^2.6.14",
+    "@iconify/react": "^5.0.2",
+    "@nextui-org/react": "^2.4.7",
+    "@supabase/supabase-js": "^2.57.0",
+    "@sentry/nextjs": "^10.10.0",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.471.0",
+    "next": "15.5.2",
+    "next-themes": "^0.3.0",
+    "next-intl": "^3.19.1",
+    "next-sitemap": "^4.2.3",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-markdown": "^9.0.1",
+    "rehype-raw": "^7.0.0",
+    "remark-gfm": "^4.0.0",
+    "sonner": "^1.5.0",
+    "tailwind-merge": "^2.6.0",
+    "tailwindcss-animate": "^1.0.7",
+    "swiper": "^11.1.12",
+    "usehooks-ts": "^3.1.0"
+  },
+  "optionalDependencies": {
+    "sharp": "^0.33.5"
+  },
+  "devDependencies": {
+    "@opennextjs/cloudflare": "^1.9.1",
+    "@playwright/test": "^1.55.0",
+    "@types/node": "^20.16.5",
+    "@types/react": "^18.3.5",
+    "@types/react-dom": "^18.3.0",
+    "eslint": "8.57.1",
+    "eslint-config-next": "15.5.3",
+    "playwright": "^1.55.0",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.11",
+    "typescript": "^5",
+    "wrangler": "^4.40.3"
+  }
+}

@@ -1,0 +1,60 @@
+name = "girl-generator-api"
+main = "src/index.ts"
+compatibility_date = "2025-10-01"
+
+[observability.logs]
+enabled = true
+
+# Note: CPU time limits are only for paid plans
+# Wall clock time (waiting for external APIs) does NOT count toward CPU time
+# Free plan: 10ms CPU time, but unlimited wall clock time for fetch() calls
+
+[dev]
+port = 8788
+
+# Cron triggers for background tasks
+[triggers]
+crons = ["*/5 * * * *"]  # Run every 5 minutes to check stuck jobs
+
+[[r2_buckets]]
+binding = "R2_PUBLIC"
+bucket_name = "girl-generator"
+
+# If KV caching is needed later, restore the configuration below
+# [[kv_namespaces]]
+# binding = "IMG_CACHE_KV"
+# id = <to-be-set>
+# preview_id = <to-be-set>
+
+[vars]
+# Non-sensitive configuration (replace with your own values)
+AUTH_JWT_ISS = "your-api-issuer"
+AUTH_JWT_AUD = "your-web-audience"
+R2_BUCKET_NAME = "your-r2-bucket"
+R2_PUBLIC_PREFIX = "public/"
+CDN_DOMAIN = "api.girlgenerator.net"
+REPLICATE_API_BASE = "https://api.your-replicate-endpoint/v1"
+REPLICATE_MODEL_SLUG = "your-replicate-model-slug"
+
+# All sensitive values must be set via Wrangler Secrets
+# Command: echo "value" | wrangler secret put SECRET_NAME
+# Required secrets (set via GitHub Actions or manually):
+# - SUPABASE_URL
+# - SUPABASE_SERVICE_ROLE_KEY
+# - AUTH_JWT_SECRET
+# - AUTH_ALLOWED_ORIGINS
+# - AUTH_BASE_URL
+# - AUTH_SIGNUP_BONUS
+# - AUTH_COOKIE_DOMAIN
+# - AUTH_COOKIE_SECURE
+# - R2_ACCOUNT_ID
+# - R2_ACCESS_KEY_ID
+# - R2_SECRET_ACCESS_KEY
+# - R2_PUBLIC_BASE_URL
+# - GOOGLE_CLIENT_ID
+# - GOOGLE_CLIENT_SECRET
+# - REPLICATE_FLUX_SCHNELL_VERSION
+# - REPLICATE_API_TOKEN
+# - REPLICATE_WEBHOOK_SECRET
+# - REPLICATE_API_BASE (if not provided via vars)
+# - REPLICATE_MODEL_SLUG

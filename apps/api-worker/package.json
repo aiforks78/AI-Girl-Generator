@@ -1,0 +1,16 @@
+{
+  "name": "girl-generator-api-worker",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node init && wrangler dev --experimental-local --persist --config wrangler.toml",
+    "deploy": "wrangler deploy --config wrangler.toml",
+    "types": "wrangler types"
+  },
+  "devDependencies": {
+    "wrangler": "^4.38.0",
+    "typescript": "^5.4.5",
+    "@cloudflare/workers-types": "^4.20251001.0"
+  }
+}

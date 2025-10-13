@@ -1,0 +1,26 @@
+[
+  {
+    "AllowedOrigins": [
+      "https://girlgenerator.net",
+      "https://www.girlgenerator.net",
+      "https://app.girlgenerator.net",
+      "http://localhost:3000"
+    ],
+    "AllowedMethods": [
+      "GET",
+      "PUT",
+      "POST",
+      "DELETE",
+      "HEAD"
+    ],
+    "AllowedHeaders": [
+      "*"
+    ],
+    "ExposeHeaders": [
+      "ETag",
+      "Content-Length",
+      "Content-Type"
+    ],
+    "MaxAgeSeconds": 3600
+  }
+]

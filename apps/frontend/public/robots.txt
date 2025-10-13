@@ -1,0 +1,13 @@
+# *
+User-agent: *
+Allow: /
+
+# *
+User-agent: *
+Disallow: /api/*
+
+# Host
+Host: https://girlgenerator.net
+
+# Sitemaps
+Sitemap: https://girlgenerator.net/sitemap.xml

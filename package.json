@@ -1,0 +1,23 @@
+{
+  "name": "ai-image-video-template",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@10.17.1",
+  "scripts": {
+    "dev": "node init && pnpm --filter ./apps/frontend dev",
+    "build": "node init && pnpm --filter ./apps/frontend build",
+    "start": "node init && pnpm --filter ./apps/frontend start",
+    "lint": "pnpm --filter ./apps/frontend lint",
+    "build:prod": "node init && NODE_ENV=production pnpm --filter ./apps/frontend build",
+    "postbuild": "pnpm --filter ./apps/frontend postbuild",
+    "build:on": "node init && pnpm --filter ./apps/frontend run build:on",
+    "preview:on": "pnpm --filter ./apps/frontend run preview:on",
+    "deploy:on": "pnpm --filter ./apps/frontend run deploy:on",
+    "visual:compare": "node scripts/visual/compare.js",
+    "playwright:install": "playwright install chromium",
+    "test:e2e": "playwright test",
+    "test:e2e:chrome": "CHROME_CHANNEL=chrome playwright test"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
